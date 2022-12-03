@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的作品集</title>
+<meta name="keywords" content="产品设计" />
+<meta name="description" content="网页作品集" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript" type="text/javascript">
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+</script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen" /> 
+<script type="text/JavaScript" src="js/slimbox2.js"></script> 
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<script src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+
+</head>
+<body>
+
+<div id="templatemo_wrapper" align="center">
+	<div id="templatemo_header">
+    	
+        <div id="site_title"><h1><a href="#">Free CSS Templates</a></h1></div>
+        
+        <div id="header_right">
+        	
+        </div>
+        
+        <div class="cleaner"></div>
+    </div>
+    
+    <div id="templatemo_menu">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="gallery.html">精彩作品</a></li>
+            <li><a href="news.html">行业动态</a></li>
+            <li><a href="blog.html">设计随笔</a></li>
+            <li><a href="contact.html" class="current">联系我们</a></li>
+        </ul>    	
+        
+        <div class="cleaner"></div>
+    </div> <!-- end of templatemo_menu -->
+
+    <div id="templatemo_main">
+    
+		    
+    	<div class="col_w960">
+        	<h2></h2>
+	        <div class="col_w450 float_l">
+           	  
+                <em>如果您对产品设计以及其他有兴趣或者有问题，请联系我。</em><br />
+                <dm>地址： 文蔚路521号</dm><br />
+                <dm>电话: 15958803073</dm><br />
+                <dm>邮箱： 1959866702@qq.com</dm>
+ 				
+                <div class="cleaner h30"></div>
+                
+ 				<div class="col_w200 float_l" id="map">
+ 					<h4 align="left">地图信息</h4>
+		            <!--<a href="images/map_big.jpg" title="Where We Are" rel="lightbox">
+                		<img src="images/map_thumb.jpg" alt="Map" />
+					</a>-->
+					<div style="width:450px;height:250px;border:#ccc solid 1px;"	class="col_w450 float_l" id="mapname">
+					</div>
+                </div>
+                
+                <!--<div class="col_w200 float_r">
+                    <h4>Mailing Address</h4>
+                    <h6><strong>Company Name</strong></h6>
+                        320-360 Vitae urna est egestas, <br />
+                        Sit amet convallis eget, 14220<br />
+                        Lorem ipsum dolor<br />
+                        <br />
+                        Tel: 020-050-4470<br />
+                        Fax: 020-050-7740 </div>-->
+                <div class="cleaner"></div>
+            </div>
+            
+            <div class="col_w450 float_r">
+                <div id="contact_form">
+            
+                    <h4 align="left">快速联系表格</h4>
+                    
+                    <form method="post" name="contact" action="#"> 
+                    
+                            <label for="author">姓名:</label> <input name="author" type="text" class="input_field" id="author" maxlength="60" /> 
+                          	<div class="cleaner_h10"></div> 
+                            
+                            <label for="email">邮箱地址:</label> <input name="email" type="text" class="input_field" id="email" maxlength="60" /> 
+                          	<div class="cleaner_h10"></div> 
+                            
+                            <label for="subject">类别:</label> <input name="subject" type="text" class="input_field" id="subject" maxlength="60" /> 
+                            <div class="cleaner_h10"></div> 
+ 
+                            <label for="text">内容:</label> <textarea id="text" name="text" rows="0" cols="0" class="required"></textarea> 
+                            <div class="cleaner_h10"></div> 
+                            
+                            <input type="submit" class="submit_btn float_l" name="submit" id="submit" value="发送" /> 
+                            <input type="reset" class="submit_btn float_r" name="reset" id="reset" value="重置" /> 
+                        
+                   	</form>
+                         
+                </div> 
+            </div>
+            
+            <div class="cleaner"></div>
+		</div>
+        
+        <div class="cleaner"></div>
+    </div> <!-- end of main -->
+    
+    <div id="templatemo_footer">
+    
+       Copyright © 2077 <a style="color: #FFFFFF; href="#" ">宁波大学科学技术学院</a> | <a style="color: #FFFFFF; href="gallery.html" ">作品集</a><br />
+        <a style="color: #FFFFFF;">@2021RenLei IPC备184179014号</a><br />
+        <em style="color: #FFFFFF;"></em>
+    
+    </div> <!-- end of templatemo_footer -->
+    
+</div> <!-- end of wrapper -->
+
+</body>
+<script type="text/javascript">
+//创建和初始化地图函数：
+function initMap(){
+createMap();//创建地图
+setMapEvent();//设置地图事件
+addMapControl();//向地图添加控件
+}
+
+//创建地图函数： http://api.map.baidu.com/lbsapi/creatmap/
+function createMap(){
+var map = new BMap.Map("mapname");//在百度地图容器中创建一个地图
+var point = new BMap.Point(121.30364,30.191398);//定义一个中心点坐标
+map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+window.map = map;//将map变量存储在全局
+}
+
+//地图事件设置函数：
+function setMapEvent(){
+map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+map.enableKeyboard();//启用键盘上下左右键移动地图
+}
+
+//地图控件添加函数：
+function addMapControl(){
+//向地图中添加缩放控件
+var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+map.addControl(ctrl_nav);
+//向地图中添加缩略图控件
+var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+map.addControl(ctrl_ove);
+//向地图中添加比例尺控件
+var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+map.addControl(ctrl_sca);
+}
+initMap();//创建和初始化地图
+</script>
+</html>
